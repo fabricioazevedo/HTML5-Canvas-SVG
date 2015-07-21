@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Images on Canvas</title>
+		</head>
+		<body>
+			<img src="star1588.png"/>
+			<canvas id ="Newcanvas" width = "400px" height = "400px"
+			style = "background-color:yellow; border:4px solid black; margin: 10px;">
+			get a new browser
+			</canvas>
+			<script>
+			var can = document.getElementById("Newcanvas");
+			var Jctx = can.getContext("2d");
+			var img = new Image();
+			
+			img.onload = function(){
+			//drawImage(image,dx,dy);
+			Jctx.drawImage(img,150,10);
+			//drawImage(image,dx,dy,dw,dh);
+			Jctx.drawImage(img,10,100,50,20);
+			Jctx.drawImage(img,100,120,200,150);r
+			//drawImage(image,sx,sy,sw,sh, dx, dy,dw, dh);
+			Jctx.drawImage(img,20,20,70,40,20,300,70,40);
+			Jctx.drawImage(img,20,20,70,40,120,300,35,20);
+			Jctx.drawImage(img,20,20,70,40,200,300,140,80);
+			
+			}
+			img.src = 'goldenball.png';
+			</script>
+		<body>
+	</html>
+</html>

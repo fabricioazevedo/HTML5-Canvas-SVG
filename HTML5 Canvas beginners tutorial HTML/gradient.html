@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+		<title>Canvas gradients examples</title>
+		<style>
+		#Newcanvas{
+			background-color:grey;
+			border:10px solid green;
+			margin:10px;
+		
+		}
+		#Newcanvas2{
+			background-color:green;
+			border:10px solid grey;
+			margin:20px;
+		
+		}
+		</style>
+		</head>
+		
+		<body>
+		<canvas id="Newcanvas" width="400px" height="400px">
+		 get a new browser.
+		</canvas>
+		
+	    <canvas id="Newcanvas2" width="400px" height="400px">
+		 get a new browser.
+		</canvas>
+		
+		<script>
+		var can = document.getElementById("Newcanvas");
+		var ctx = can.getContext("2d");
+		//createLinearGradient(x,y,x1,y1);
+		//addColorStop(0,"first_color");
+		//addColorStop(1, "second_color");
+		//fillStyle or strokeStyle;
+		var Jgrd = ctx.createLinearGradient(0,0,400,400);
+		Jgrd.addColorStop(0,"Red");
+		Jgrd.addColorStop(1,"Yellow");
+		//Gradient created, now fill it.
+		ctx.fillStyle = Jgrd;
+		ctx.fillRect(0,0,400,400);
+		
+		var can2 = document.getElementById("Newcanvas2");
+		var ctx2 = can2.getContext("2d");
+		//createRadialGradient(x,y,r,x1,y1,r1);
+		//addColorStop(0,"first_color");
+		//addColorStop(1, "second_color");
+		//fillStyle or strokeStyle;
+		var Jgrd2 = ctx2.createRadialGradient(100,100,1,150,150,160);
+		Jgrd2.addColorStop(0,"Red");
+		Jgrd2.addColorStop(1,"Yellow");
+		//Gradient created, now fill it.
+		ctx2.fillStyle = Jgrd2;
+		ctx2.fillRect(0,0,400,400);
+		
+		
+		</script>
+		</body>
+	</html>

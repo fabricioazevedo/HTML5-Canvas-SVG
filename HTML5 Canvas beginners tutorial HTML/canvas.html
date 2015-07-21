@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+	<head>
+		<title> Canvas elements </title>
+		<style type = "text/css">
+		#Newcanvas{ background-color: yellow;
+					border: 2px solid black;
+		
+		}
+		</style>
+	</head>
+	
+    <body>
+	 <canvas id = "Newcanvas" width = "400px" height = "400px">
+	 </canvas>
+	 <script>
+		var can = document.getElementById("Newcanvas");
+		var Jctx = can.getContext("2d");
+		Jctx.fillStyle;
+		Jctx.fillRect(10,100,150,150);//x-axis, y-axis, width, hight
+		Jctx.fillStyle = "FF00FF";
+		Jctx.fillRect(165, 100, 150, 100);
+	 </script>
+    </body>
+</html>
